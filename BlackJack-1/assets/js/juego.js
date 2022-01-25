@@ -34,10 +34,12 @@ const miModulo = (() =>{
 		deck = crearDeck();
 		puntosJugadores = [];
 
+        //inicializa puntos jugadores
 		for( let i = 0; i < numJugadores; i++) {
 			puntosJugadores.push(0);
 		}
-
+    
+		//Inicializa en el Html las variables a 0 y  vacio
 		puntosHTML.forEach( elem => elem.innerText = 0);
 		divCartasJugadores.forEach( elem => elem.innerHTML = "");
 		
@@ -102,7 +104,7 @@ const miModulo = (() =>{
 						: valor * 1;		
 	}
 
-	// Tunro : 0 = primer jugador y el ultimosera la computadora
+	// Tunro : 0 = primer jugador y el ultimo sera la computadora
 	const acumularPuntos = ( carta, turno ) =>{
 
 		puntosJugadores[turno] = puntosJugadores[turno] + valorCarta( carta );
@@ -119,7 +121,7 @@ const miModulo = (() =>{
 	}
 
 	const determinarGanador = () => {
-
+       // se toman los puntosMinimos y puntosComputadora del arreglo puntosJugadores
 		const [ puntosMinimos, puntosComputadora ] = puntosJugadores;
 
 		setTimeout ( () => {
