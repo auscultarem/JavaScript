@@ -1,3 +1,4 @@
+import { Todo } from './todo.class'
 
 export class TodoList {
 
@@ -11,7 +12,7 @@ export class TodoList {
         this.guardarLocalStorage();
     }
 
-    eleminarTodo( id ) {
+    eliminarTodo( id ) {
 
         this.todos = this.todos.filter( todo => todo.id != id ) 
         this.guardarLocalStorage();
@@ -51,6 +52,8 @@ export class TodoList {
         }else {
             this.todos = [];
         }
+
+        this.todos = this.todos.map ( obj => Todo.fromJson( obj ) )
 
     }
 

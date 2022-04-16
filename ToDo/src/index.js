@@ -5,15 +5,15 @@ import { crearTodoHtml  } from './js/componentes';
 
 export const todoList = new TodoList();
 
-const tarea = new Todo("Aprender JavaScript");
-const tarea2 = new Todo("Aprender Python");
+// const tarea = new Todo("Aprender JavaScript");
+// const tarea2 = new Todo("Aprender Python");
 
-todoList.nuevoTodo( tarea );
-todoList.nuevoTodo( tarea2 );
+// todoList.nuevoTodo( tarea );
+// todoList.nuevoTodo( tarea2 );
 
-console.log( todoList );
+// console.log( todoList );
 
-crearTodoHtml( tarea );
-crearTodoHtml( tarea2 );
+// crearTodoHtml( tarea );
+// crearTodoHtml( tarea2 );
 
 todoList.todos.forEach( todo => crearTodoHtml ( todo ) );
