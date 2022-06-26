@@ -7,7 +7,7 @@ class Persona{
     }
 
     static mensaje () {
-        console.log( this.nombre );
+        console.log( this.nombre ); // undefine
         console.log('Hola a todos, soy un metodo statico');
     }
 
@@ -63,3 +63,6 @@ console.log( spiderman );
 console.log('Conteo estatico', Persona._conteo );
 console.log( Persona.conteo );
 Persona.mensaje();
+
+//
+Persona.propiedadExterna = 'Hola Mundo';
